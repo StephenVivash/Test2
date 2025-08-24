@@ -1,5 +1,14 @@
 ﻿
+using ValueSequencer;
+
 Console.WriteLine("Hello .NET!");
+
+Sequences.Initialise();
+CHexagramValueSequencer hvsCurrent = new CHexagramValueSequencer(0);
+for (int i = 0; i < 10; i++)
+{
+	Console.WriteLine(hvsCurrent.Next());
+}
 
 Console.WriteLine("AddOne(1) = {0}", AddOne(1));
 Console.WriteLine("AddOne(2) = {0}", AddOne(2));
