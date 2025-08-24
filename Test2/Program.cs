@@ -4,10 +4,10 @@ using ValueSequencer;
 Console.WriteLine("Hello .NET!");
 
 Sequences.Initialise();
-CHexagramValueSequencer hvsCurrent = new CHexagramValueSequencer(0);
+CHexagramValueSequencer hvsCurrent = new CHexagramValueSequencer(63);
 for (int i = 0; i < 10; i++)
 {
-	Console.WriteLine(hvsCurrent.Next());
+	Console.WriteLine("Current {0}", (hvsCurrent.Next() as CHexagramValueSequencer).DescribeCast());
 }
 
 Console.WriteLine("AddOne(1) = {0}", AddOne(1));
