@@ -5,6 +5,8 @@ Console.WriteLine("Hello .NET!");
 
 Sequences.Initialise();
 CHexagramValueSequencer hvsCurrent = new CHexagramValueSequencer(63);
+CHexagramValueSequencer hvs = hvsCurrent; // new CHexagramValueSequencer(63);
+
 for (int i = 0; i < 10; i++)
 {
 	Console.WriteLine("Current {0}", (hvsCurrent.Next() as CHexagramValueSequencer).DescribeCast());
