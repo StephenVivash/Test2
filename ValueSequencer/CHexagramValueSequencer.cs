@@ -220,7 +220,7 @@ namespace ValueSequencer
 			return HexagramId() + " " + Label + (bValue ? " (" + ValueStr + ")" : "");
 		}
 
-		public String DescibeSecondary(bool bValue = false)
+		public String DescribeSecondary(bool bValue = false)
 		{
 			if (IsMoving)
 			{
@@ -234,7 +234,7 @@ namespace ValueSequencer
 
 		public String DescribeCast(bool bValue = false)
 		{
-			return DescribePrimary(bValue) + (IsMoving ? " > " + DescibeSecondary(bValue) : "");
+			return DescribePrimary(bValue) + (IsMoving ? " > " + DescribeSecondary(bValue) : "");
 		}
 
 		protected override int GetCurrentSequence() { return m_nCurrentSequence; }
