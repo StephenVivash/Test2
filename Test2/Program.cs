@@ -5,12 +5,17 @@ Console.WriteLine("Hello .NET!");
 
 Sequences.Initialise();
 CHexagramValueSequencer hvsCurrent = new CHexagramValueSequencer(63);
-CHexagramValueSequencer hvs = hvsCurrent; // new CHexagramValueSequencer(63);
+CHexagramValueSequencer hvs = hvsCurrent;
 
 for (int i = 0; i < 10; i++)
-{
-	Console.WriteLine("Current {0}", (hvsCurrent.Next() as CHexagramValueSequencer).DescribeCast());
-}
+	Console.WriteLine("Current {0}", ((CHexagramValueSequencer)hvsCurrent.Next()).DescribeCast());
+
+CLineValueSequencer.SetCurrentRatio(0);
+CHexagramArray ha = new CHexagramArray();
+ha.MultiCast(10000);
+foreach (CHexagram h in ha.HexagramArray())
+	if (h.Count > 0)
+		Console.WriteLine($"{h.Count,4:D} {h.DescribeCast}");
 
 Console.WriteLine("AddOne(1) = {0}", AddOne(1));
 Console.WriteLine("AddOne(2) = {0}", AddOne(2));
