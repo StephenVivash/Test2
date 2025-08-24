@@ -22,7 +22,7 @@ public class HexagramValueSequencerHexagramIdTests
         var hvs = new CHexagramValueSequencer(0);
 
         var baseId = hvs.HexagramId();
-        hvs.Trigram(0).Line(0).Next(true);
+        hvs.Trigram(0).Line(0).Next(false);
         var movingId = hvs.HexagramId();
 
         Assert.DoesNotContain('.', baseId);
