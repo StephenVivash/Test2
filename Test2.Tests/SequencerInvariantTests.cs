@@ -37,10 +37,10 @@ public sealed class VSAdapter : IYijingMachine
 	private readonly ValueSequencer.CValueSequencer _vs;
 	public VSAdapter(ValueSequencer.CValueSequencer vs) { _vs = vs; }
 
-	public int Hex => /* map to 1..64 from your internal index */;
-	public bool[] Lines => /* return 6 booleans bottom..top */;
-	public bool[] Lower => /* return 3 booleans bottom..top */;
-	public bool[] Upper => /* return 3 booleans bottom..top */;
+	public int Hex => 0 /* map to 1..64 from your internal index */; // ??????????????????????????????????????????????????????????????????????????????????????????
+	public bool[] Lines => new bool[] { true, true, true, true, true, true } /* return 6 booleans bottom..top */;
+	public bool[] Lower => new bool[] { true, true, true } /* return 3 booleans bottom..top */;
+	public bool[] Upper => new bool[] {true, true, true} /* return 3 booleans bottom..top */;
 
 	public void ActivateHex() { /* set active to hexagram mode */ }
 	public void ActivateLower() { /* set active to lower trigram mode */ }
